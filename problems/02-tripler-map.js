@@ -10,10 +10,27 @@ Examples:
 console.log(tripler([2, 7, 4])); // [ 6, 21, 12 ]
 console.log(tripler([-5, 10, 0, 11])); // [ -15, 30, 0, 33 ]
 */
-
 let tripler = function(nums) {
-    // Your code here
-};
+  let msg = []
+  let tripler = nums.map(function(element) {
+	let tri =  element * 3
+  msg.push(tri)
+  })
+return msg
+}
+
+// let tripler = function(nums) {
+  // let newnum = [];
+  // for (i=0; i<nums.length; i++){
+  //   let el = nums[i] * 3;
+  //   newnum.push(el)
+  // }
+  // return newnum
+ 
+
+// };
+console.log(tripler([2, 7, 4])); // [ 6, 21, 12 ]
+console.log(tripler([-5, 10, 0, 11])); // [ -15, 30, 0, 33 ]
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

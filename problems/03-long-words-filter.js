@@ -12,15 +12,22 @@ console.log(longWords(['bike', 'skateboard','scooter', 'moped'])); // [ 'skatebo
 console.log(longWords(['couscous', 'soup', 'ceviche', 'solyanka' ,'taco'])); // [ 'couscous', 'ceviche', 'solyanka' ]
 
 */
-
 let longWords = function(words) {
-    // Your code here
+    let wordlenght = [];
+    let longWords = words.filter(function(element) {
+     if (element.length > 5){
+      wordlenght.push(element)
+     }
+    })
+    return wordlenght
 };
 
+console.log(longWords(['bike', 'skateboard','scooter', 'moped'])); // [ 'skateboard', 'scooter' ]
+console.log(longWords(['couscous', 'soup', 'ceviche', 'solyanka' ,'taco'])); // [ 'couscous', 'ceviche', 'solyanka' ]
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
   module.exports = longWords;
 } catch (e) {
   module.exports = null;
-}
+}

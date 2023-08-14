@@ -26,8 +26,33 @@ console.log(twoDimensionalProduct(arr2)); // 88
 */
 
 let twoDimensionalProduct = function(arr) {
-    // Your code here
+  // let pro = 1;
+  // let twoDimensionalProduct = arr.forEach(function(subarr) {
+  //   for(let j=0; j<subarr.length; j++){
+  //     let num = subarr[j]
+  //     pro *= subarr[j]
+  //   }
+  // })
+  //   return pro
+  // let twoDimensionalProduct = arr.map((subarr)=>{
+  //     return subarr.reduce((a,b)=> a*b)
+  // })
+
+  return arr.flat().reduce((acc, c) => acc * c);
+
 };
+
+let arr1 = [
+  [6, 4],
+  [5],
+  [3, 1]
+];
+console.log(twoDimensionalProduct(arr1)); // 360
+let arr2 = [
+  [11, 4],
+  [2]
+];
+console.log(twoDimensionalProduct(arr2)); // 88
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
